@@ -77,7 +77,7 @@ if user_input is not None:
 
     if user_input["uploaded_file"]:
         st.write("This is the image that was provided.")
-        # st.image(user_input["uploaded_file"])
+        st.image(user_input["uploaded_file"])
         st.write("Using the image that you gave us.")
 
         x = "./Data/HAM10000_images_part_1/" + user_input["uploaded_file"].name
@@ -105,8 +105,7 @@ if user_input is not None:
 
         st.write("Your skin problem is classified as:", dx_dictionary[label_encoder.inverse_transform(index[0])[0]])
 
-        st.write("You got cancer :)")
-        st.write("What percentag of skin dieases is classified as ", dx_dictionary[label_encoder.inverse_transform(index[0])[0]], "?")
+        st.write("What percentage of skin disease matches your classification?")
 
         # show the frequency of different types of disesases on a global scale
         diseases = new_df['dx'].value_counts()
@@ -117,7 +116,7 @@ if user_input is not None:
             if diseases_name[i] == dx_dictionary[label_encoder.inverse_transform(index[0])[0]]:
                 explode.append(0.5)
             explode.append(0)
-        plt.pie(diseases, labels=diseases_name, radius=2, autopct='%.1f%%', shadow=True, explode=explode)
+        plt.pie(diseases, labels=diseases_name, radius=2, autopct='%.1f%%', shadow=False, explode=explode)
         # don't want to see warning :)
         st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -129,7 +128,7 @@ if user_input is not None:
         st.write("Frequencey of gender that has ", dx_dictionary[label_encoder.inverse_transform(index[0])[0]], " disease")
         only_disease_sex = only_disease['sex'].value_counts()
         only_disease_sex_name= only_disease['sex'].value_counts().index
-        plt.pie(only_disease_sex, labels=only_disease_sex_name, radius=2, autopct='%.1f%%', shadow=True)
+        plt.pie(only_disease_sex, labels=only_disease_sex_name, radius=2, autopct='%.1f%%', shadow=False)
         st.pyplot()
 
         # show how likely is this disease to be on the body parts that the user chose
@@ -141,7 +140,7 @@ if user_input is not None:
             if body_place_name[i] == user_input["body"]:
                 explode2.append(0.5)
             explode2.append(0)
-        plt.pie(body_place, labels=body_place_name, radius=2, autopct='%.1f%%', shadow=True, explode=explode2)
+        plt.pie(body_place, labels=body_place_name, radius=2, autopct='%.1f%%', shadow=False, explode=explode2)
         st.pyplot()
         
         disease_to_website = {
