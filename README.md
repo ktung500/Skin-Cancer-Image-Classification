@@ -7,4 +7,4 @@
 * Then open anaconda-prompt
 * On anaconda prompt change your environment from base to whatever new environment you made
 * download tensorflow, keras, streamlit, pandas, nupmy, matplotlib, scikit-learn
-* Then type `streamlit run "your environment name"` on the anaconda prompt
+* Then type `streamlit run prediction.py` on the anaconda prompt
