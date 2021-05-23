@@ -76,8 +76,6 @@ if user_input is not None:
     st.bar_chart(age_sex_df['dx'].value_counts())
 
     if user_input["uploaded_file"]:
-        st.write("This is the image that was provided.")
-        st.image(user_input["uploaded_file"])
         st.write("Using the image that you gave us.")
 
         x = "./Data/HAM10000_images_part_1/" + user_input["uploaded_file"].name
