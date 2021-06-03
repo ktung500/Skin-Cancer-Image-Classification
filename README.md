@@ -11,7 +11,7 @@
 
 
 #### TO RUN THE JUPYTER NOTEBOOK ####
-The python code is in a zipped file named "CNN_Notebook_Zipped"
+The python code is located in "ConvolutionalNeuralNetworkNotebookFinal.ipynb"
 
 Download all of the images from the kaggle dataset: https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
 Save to a Folder in the same directory as the notebook called "Data", with the HAM10000_metadata.csv, HAM10000_images_part_1, and HAM10000_images_part_2
@@ -19,4 +19,4 @@ Save to a Folder in the same directory as the notebook called "Data", with the H
 In addition to the images, please download the libraries that are listed in the first cell of the "ConvolutionNeuralNetworkNotebookFinal.ipynb" in order for the Notebook to run.
 
 #### UPDATES FROM REPORT ####
-Since the creation of report, we have implemented callback functions that stop the model before it overfits. Removing these callback funtions can result in the testing accuracy to fluctuate. There are two separate pdfs that show the Model with callback functions and without callback functions. This is for model evaluation and accuracy visualization purposes.
+Since the creation of report, we have implemented callback functions that stop the model before it overfits. Removing these callback funtions can result in the testing accuracy to fluctuate. There are two separate pdfs that show the Model with callback functions and without callback functions. These pdfs are for model evaluation/comparison and accuracy visualization purposes.
