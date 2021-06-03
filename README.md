@@ -11,6 +11,8 @@
 
 
 #### TO RUN THE JUPYTER NOTEBOOK ####
+The python code is in a zipped file named "CNN_Notebook_Zipped"
+
 Download all of the images from the kaggle dataset: https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
 Save to a Folder in the same directory as the notebook called "Data", with the HAM10000_metadata.csv, HAM10000_images_part_1, and HAM10000_images_part_2
 
